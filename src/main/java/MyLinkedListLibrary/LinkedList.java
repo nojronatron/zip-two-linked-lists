@@ -22,6 +22,7 @@ public class LinkedList<T> {
 
         if (this.head == null) {
             this.head = newNode;
+            this.nodeCount++;
             return true;
         }
 
@@ -32,6 +33,7 @@ public class LinkedList<T> {
                 currentNode = currentNode.getNext();
             } else {
                 currentNode.setNext(newNode);
+                this.nodeCount++;
                 return true;
             }
         }
