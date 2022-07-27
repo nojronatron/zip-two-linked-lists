@@ -10,7 +10,7 @@ public class LinkedListZipper<T> {
             return null;
         }
 
-        if (linkedListLeft == null && linkedListRight != null) {
+        if (linkedListLeft == null) {
             if (linkedListRight.getHead() != null) {
                 return linkedListRight;
             } else {
@@ -18,7 +18,7 @@ public class LinkedListZipper<T> {
             }
         }
 
-        if (linkedListLeft != null && linkedListRight == null) {
+        if (linkedListRight == null) {
             if (linkedListLeft.getHead() != null) {
                 return linkedListLeft;
             } else {
@@ -26,8 +26,6 @@ public class LinkedListZipper<T> {
             }
         }
 
-        assert linkedListLeft != null;
-        assert linkedListRight != null;
         Node<T> temp1 = linkedListLeft.getHead();
         Node<T> temp2 = linkedListRight.getHead();
         Node<T> temp3 = temp1.getNext();
@@ -37,13 +35,13 @@ public class LinkedListZipper<T> {
             temp1.setNext(temp2);
             temp2.setNext(temp3);
 
-            // if temp3 is null but temp3 has value point temp2 to temp4 and return leftLinkedList
+            // if temp3 is null linkedListLeft is same length or longer than linkedListRight
             if (temp3 == null) {
                 temp2.setNext(temp4);
                 return linkedListLeft;
             }
 
-            // if temp3 has value and temp4 is null
+            // if temp4 is null likedListRight is longer than linkedListLeft
             if (temp4 == null) {
                 return linkedListLeft;
             }
