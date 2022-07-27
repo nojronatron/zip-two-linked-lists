@@ -15,4 +15,10 @@ Write a method that takes two linked lists as input, performs a "zip" operation 
 1. Clone from this repo to your local
 2. Build the project `./gradlew build`
 3. Run the unit tests `./gradlew test --info`
-4. 
+4. Use the Library or Libraries
+
+## File Structure
+
+[Zipper Method lives in the com.example.demoziplinkedlists package](src/main/java/com/example/demoziplinkedlists/LinkedListZipper.java)
+
+[LinkedList and Node classes live in MyLinkedListLibrary package](src/main/java/MyLinkedListLibrary)
