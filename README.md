@@ -10,6 +10,13 @@ Write a method that takes two linked lists as input, performs a "zip" operation 
 - [X] Custom Generic Node class for storing value, and references for previous and next
 - [X] Custom Class to contain the Zipper function
 
+## Project Setup and Prerequisites
+
+This project was bootstrapped using SpringInitializr. This was not a requirement for this project. It was just an opportunity for me to practice using that tool.
+
+- Gradle v.7.4.x or newer
+- Built with Java SDK v.17.0.3 (Eclipse Temurin v17.0.3, Adoptium v17.0.3)
+
 ## Build
 
 1. Clone from this repo to your local
