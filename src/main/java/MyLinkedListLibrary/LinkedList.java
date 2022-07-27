@@ -14,6 +14,19 @@ public class LinkedList<T> {
     }
 
     public int getSize() {
+        this.nodeCount = 0;
+
+        if (this.head == null) {
+            return this.nodeCount;
+        }
+
+        Node<T> current = head;
+
+        while (current != null) {
+            this.nodeCount++;
+            current = current.getNext();
+        }
+
         return this.nodeCount;
     }
 
