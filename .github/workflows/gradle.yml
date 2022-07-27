@@ -34,4 +34,5 @@ jobs:
         arguments: build
     - name: Test with Gradle
       run: |
+        cd ../../
         ./gradlew clean test --info
