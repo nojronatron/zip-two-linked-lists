@@ -16,7 +16,7 @@ public class LinkedList<T> {
     public int getSize() {
         this.nodeCount = 0;
 
-        if (this.head == null) {
+        if (this.head == null || this.head.getValue() == null) {
             return this.nodeCount;
         }
 

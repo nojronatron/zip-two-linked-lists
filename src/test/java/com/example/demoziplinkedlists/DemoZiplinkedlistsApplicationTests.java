@@ -159,4 +159,30 @@ class DemoZiplinkedlistsApplicationTests {
 		assertNull(actualResult);
 	}
 
+	@Test
+	void test_linkedList_CanCountItsOwnNodes() {
+		int expectedHead = 1;
+		int expectedTwo = 2;
+		int expectedThree = 3;
+		int expectedFour = 4;
+		int expectedFive = 5;
+		int expectedSix = 6;
+
+		LinkedList<Integer> sut = new LinkedList<>(null);
+		assertEquals(0, sut.getSize());
+
+		sut = new LinkedList<>(expectedHead);
+		assertEquals(expectedHead, sut.getSize());
+		sut.add(expectedTwo);
+		assertEquals(expectedTwo, sut.getSize());
+		sut.add(expectedThree);
+		assertEquals(expectedThree, sut.getSize());
+		sut.add(expectedFour);
+		assertEquals(expectedFour, sut.getSize());
+		sut.add(expectedFive);
+		assertEquals(expectedFive, sut.getSize());
+		sut.add(expectedSix);
+		assertEquals(expectedSix, sut.getSize());
+	}
+
 }
