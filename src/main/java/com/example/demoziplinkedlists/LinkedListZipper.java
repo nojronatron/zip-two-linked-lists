@@ -31,7 +31,7 @@ public class LinkedListZipper<T> {
         Node<T> temp3 = temp1.getNext();
         Node<T> temp4 = temp2.getNext();
 
-        while (temp1 != null) {
+        while (true) {
             temp1.setNext(temp2);
             temp2.setNext(temp3);
 
@@ -51,7 +51,5 @@ public class LinkedListZipper<T> {
             temp3 = temp3.getNext();
             temp4 = temp4.getNext();
         }
-
-        return null;
     }
 }
