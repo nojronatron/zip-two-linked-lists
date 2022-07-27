@@ -1,5 +1,6 @@
 package com.example.demoziplinkedlists;
 
+import MyLinkedListLibrary.LinkedListZipper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import MyLinkedListLibrary.LinkedList;

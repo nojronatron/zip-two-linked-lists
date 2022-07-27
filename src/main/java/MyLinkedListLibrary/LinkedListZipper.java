@@ -1,4 +1,4 @@
-package com.example.demoziplinkedlists;
+package MyLinkedListLibrary;
 
 import MyLinkedListLibrary.LinkedList;
 import MyLinkedListLibrary.Node;
