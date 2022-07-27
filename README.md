@@ -26,6 +26,8 @@ This project was bootstrapped using SpringInitializr. This was not a requirement
 
 ## File Structure
 
-[Zipper Method lives in the com.example.demoziplinkedlists package](src/main/java/com/example/demoziplinkedlists/LinkedListZipper.java)
+[Zipper Method lives in the MyLinkedListLibrary package](src/main/java/MyLinkedListLibrary)
 
 [LinkedList and Node classes live in MyLinkedListLibrary package](src/main/java/MyLinkedListLibrary)
+
+[Unit tests](src/test/java/com/example/demoziplinkedlists)
