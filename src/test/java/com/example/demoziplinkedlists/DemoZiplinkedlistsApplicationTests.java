@@ -31,16 +31,16 @@ class DemoZiplinkedlistsApplicationTests {
 		int expectedFive = 5;
 		int expectedSix = 6;
 
-		LinkedList<Integer> ll1 = new LinkedList<>(expectedHead);
-		ll1.add(expectedThree);
-		ll1.add(expectedFive);
+		LinkedList<Integer> sutLeft = new LinkedList<>(expectedHead);
+		sutLeft.add(expectedThree);
+		sutLeft.add(expectedFive);
 
-		LinkedList<Integer> ll2 = new LinkedList<>(expectedTwo);
-		ll2.add(expectedFour);
-		ll2.add(expectedSix);
+		LinkedList<Integer> sutRight = new LinkedList<>(expectedTwo);
+		sutRight.add(expectedFour);
+		sutRight.add(expectedSix);
 
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-		var actualResult = llz.zipLinkedLists(ll1, ll2);
+		var actualResult = llz.zipLinkedLists(sutLeft, sutRight);
 
 		assertNotNull(actualResult);
 		assertEquals(expectedSize, actualResult.getSize());
@@ -57,16 +57,16 @@ class DemoZiplinkedlistsApplicationTests {
 		int expectedFive = 5;
 		int expectedSix = 6;
 
-		LinkedList<Integer> ll1 = new LinkedList<>(expectedHead);
-		ll1.add(expectedThree);
-		ll1.add(expectedFive);
-		ll1.add(expectedSix);
+		LinkedList<Integer> sutLeft = new LinkedList<>(expectedHead);
+		sutLeft.add(expectedThree);
+		sutLeft.add(expectedFive);
+		sutLeft.add(expectedSix);
 
-		LinkedList<Integer> ll2 = new LinkedList<>(expectedTwo);
-		ll2.add(expectedFour);
+		LinkedList<Integer> sutRight = new LinkedList<>(expectedTwo);
+		sutRight.add(expectedFour);
 
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-		var actualResult = llz.zipLinkedLists(ll1, ll2);
+		var actualResult = llz.zipLinkedLists(sutLeft, sutRight);
 
 		assertNotNull(actualResult);
 		assertEquals(expectedSize, actualResult.getSize());
@@ -83,16 +83,16 @@ class DemoZiplinkedlistsApplicationTests {
 		int expectedFive = 5;
 		int expectedSix = 6;
 
-		LinkedList<Integer> ll1 = new LinkedList<>(expectedHead);
-		ll1.add(expectedThree);
+		LinkedList<Integer> sutLeft = new LinkedList<>(expectedHead);
+		sutLeft.add(expectedThree);
 
-		LinkedList<Integer> ll2 = new LinkedList<>(expectedTwo);
-		ll2.add(expectedFour);
-		ll2.add(expectedFive);
-		ll2.add(expectedSix);
+		LinkedList<Integer> sutRight = new LinkedList<>(expectedTwo);
+		sutRight.add(expectedFour);
+		sutRight.add(expectedFive);
+		sutRight.add(expectedSix);
 
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-		var actualResult = llz.zipLinkedLists(ll1, ll2);
+		var actualResult = llz.zipLinkedLists(sutLeft, sutRight);
 
 		assertNotNull(actualResult);
 		assertEquals(expectedSize, actualResult.getSize());
@@ -109,17 +109,15 @@ class DemoZiplinkedlistsApplicationTests {
 		int expectedFive = 5;
 		int expectedSix = 6;
 
-		LinkedList<Integer> ll1 = new LinkedList<>(expectedHead);
-		ll1.add(expectedTwo);
-		ll1.add(expectedThree);
-		ll1.add(expectedFour);
-		ll1.add(expectedFive);
-		ll1.add(expectedSix);
-
-		LinkedList<Integer> ll2 = new LinkedList<>(null);
+		LinkedList<Integer> sutLeft = new LinkedList<>(expectedHead);
+		sutLeft.add(expectedTwo);
+		sutLeft.add(expectedThree);
+		sutLeft.add(expectedFour);
+		sutLeft.add(expectedFive);
+		sutLeft.add(expectedSix);
 
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-		var actualResult = llz.zipLinkedLists(ll1, ll2);
+		var actualResult = llz.zipLinkedLists(sutLeft, null);
 
 		assertNotNull(actualResult);
 		assertEquals(expectedSize, actualResult.getSize());
@@ -136,17 +134,15 @@ class DemoZiplinkedlistsApplicationTests {
 		int expectedFive = 5;
 		int expectedSix = 6;
 
-		LinkedList<Integer> ll1 = new LinkedList<>(null);
-
-		LinkedList<Integer> ll2 = new LinkedList<>(expectedHead);
-		ll2.add(expectedTwo);
-		ll2.add(expectedThree);
-		ll2.add(expectedFour);
-		ll2.add(expectedFive);
-		ll2.add(expectedSix);
+		LinkedList<Integer> sutRight = new LinkedList<>(expectedHead);
+		sutRight.add(expectedTwo);
+		sutRight.add(expectedThree);
+		sutRight.add(expectedFour);
+		sutRight.add(expectedFive);
+		sutRight.add(expectedSix);
 
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-		var actualResult = llz.zipLinkedLists(ll1, ll2);
+		var actualResult = llz.zipLinkedLists(null, sutRight);
 
 		assertNotNull(actualResult);
 		assertEquals(expectedSize, actualResult.getSize());
