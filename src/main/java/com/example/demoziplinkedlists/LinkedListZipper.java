@@ -9,7 +9,7 @@ public class LinkedListZipper<T> {
         if (linkedListLeft == null && linkedListRight == null) {
             return null;
         }
-        
+
         if (linkedListLeft == null && linkedListRight != null) {
             if (linkedListRight.getHead() != null) {
                 return linkedListRight;

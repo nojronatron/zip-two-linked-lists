@@ -154,14 +154,9 @@ class DemoZiplinkedlistsApplicationTests {
 
 	@Test
 	void test_bothLLNull_ReturnNullWithoutError() {
-		int expectedCount = 0;
-		LinkedList<Integer> ll1 = new LinkedList<>(null);
-		LinkedList<Integer> ll2 = new LinkedList<>(null);
 		LinkedListZipper<Integer> llz = new LinkedListZipper<>();
-//		var actualResult = llz.zipLinkedLists(ll1, ll2);
 		var actualResult = llz.zipLinkedLists(null, null);
-		assertEquals(expectedCount, ll1.getSize());
-		assertEquals(ll1.getSize(), ll2.getSize());
+		assertNull(actualResult);
 	}
 
 }
