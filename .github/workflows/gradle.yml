@@ -33,5 +33,6 @@ jobs:
       with:
         arguments: build
     - name: Test with Gradle
-      run: |
-        ./gradlew clean test --info
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: test
