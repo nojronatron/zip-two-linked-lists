@@ -34,4 +34,17 @@ public class Node<T> {
     public void setPrevious(Node<T> previous) {
         this.previous = previous;
     }
+
+    @Override
+    public String toString() {
+        String previousRef = "";
+        String nextRef = "";
+        if (this.previous != null) {
+            previousRef = "<-";
+        }
+//        if (this.next != null) {
+//            nextRef = "->";
+//        }
+        return String.format("%s[%s]%s->", previousRef, this.value, nextRef);
+    }
 }
