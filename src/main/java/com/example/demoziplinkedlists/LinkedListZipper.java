@@ -10,7 +10,7 @@ public class LinkedListZipper<T> {
             return null;
         }
 
-        if (linkedListLeft == null && linkedListRight != null) {
+        if (linkedListLeft == null) {
             if (linkedListRight.getHead() != null) {
                 return linkedListRight;
             } else {
@@ -18,7 +18,7 @@ public class LinkedListZipper<T> {
             }
         }
 
-        if (linkedListLeft != null && linkedListRight == null) {
+        if (linkedListRight == null) {
             if (linkedListLeft.getHead() != null) {
                 return linkedListLeft;
             } else {
@@ -26,14 +26,12 @@ public class LinkedListZipper<T> {
             }
         }
 
-        assert linkedListLeft != null;
-        assert linkedListRight != null;
         Node<T> temp1 = linkedListLeft.getHead();
         Node<T> temp2 = linkedListRight.getHead();
         Node<T> temp3 = temp1.getNext();
         Node<T> temp4 = temp2.getNext();
 
-        while (temp1 != null) {
+        while (true) {
             temp1.setNext(temp2);
             temp2.setNext(temp3);
 
@@ -53,7 +51,5 @@ public class LinkedListZipper<T> {
             temp3 = temp3.getNext();
             temp4 = temp4.getNext();
         }
-
-        return null;
     }
 }
