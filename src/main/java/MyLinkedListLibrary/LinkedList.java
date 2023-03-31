@@ -53,4 +53,19 @@ public class LinkedList<T> {
 
         return false;
     }
+
+    @Override
+    public String toString(){
+        if (this.nodeCount < 1) {
+            return "";
+        }
+        StringBuilder nodes = new StringBuilder("(head)-");
+        Node<T> currentNode = this.head;
+        while (currentNode != null){
+            nodes.append(currentNode);
+            currentNode = currentNode.getNext();
+        }
+        nodes.append("NULL");
+        return nodes.toString();
+    }
 }
